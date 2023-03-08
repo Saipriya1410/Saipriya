@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace data_types
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char letter, letter1, letter2;
+
+            Console.WriteLine("enter the letter:\n");
+            letter = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("enter the letter:\n");
+            letter1 = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("enter the letter:\n");
+            letter2 = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("----------");
+            Console.WriteLine("{0} {1} {2}",letter2,letter1,letter);
+        }
+    }
+}
