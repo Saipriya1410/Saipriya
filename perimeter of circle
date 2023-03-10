@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace raadiusofcircle
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double r, per_cir;
+            double PI = 3.14;
+
+            Console.WriteLine("enter the radius: ");
+            r = Convert.ToDouble(Console.ReadLine());
+            per_cir = 2 * PI * r;
+            Console.WriteLine("Perimeter of circle : {0} ", per_cir);
+            Console.ReadLine();
+        }
+    }
+}
+output;;;
+enter the radius:
+2
+Perimeter of circle : 12.56
