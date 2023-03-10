@@ -1,0 +1,43 @@
+Write a C# Sharp program that takes a character as input and check the input (lowercase) is a vowel, a digit, or any other symbol.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace symbol
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char symbol;
+
+            Console.WriteLine("enter the symbol");
+            symbol = Convert.ToChar(Console.ReadLine());
+
+            if ((symbol == 'a') || (symbol == 'e') || (symbol == 'i') || (symbol == 'o') || (symbol == 'u'))
+            
+                Console.WriteLine("It's a lowercase value");
+            
+            else if((symbol >= '0') && (symbol <= '9'))
+            
+                Console.WriteLine("It is a digit");
+            
+            else
+            
+                Console.Write("It is another symbol\n");
+            
+        }
+    }
+}
+output;;
+enter the symbol
+h
+It is another symbol
+enter the symbol
+a
+It's a lowercase value
+enter the symbol
+8
+It is a digit
