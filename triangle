@@ -1,3 +1,4 @@
+Write a C# Sharp program that takes a number and a width also a number, as input and then displays a triangle of that width, using that number.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -29,3 +30,11 @@ namespace triangle
         }
     }
 }
+output;;;
+Input a number: 2                                                                                             
+Input the desired width: 5                                                                                    
+22222
+2222
+222
+22  
+2 
