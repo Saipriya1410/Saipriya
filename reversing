@@ -1,3 +1,4 @@
+ Write a C# Sharp program that takes three letters as input and display them in reverse order. 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,3 +25,8 @@ namespace data_types
         }
     }
 }
+output;;;
+Input letter: a                                                                                               
+Input letter: b                                                                                               
+Input letter: c                                                                                               
+c b a
