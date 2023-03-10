@@ -1,0 +1,52 @@
+ Write a C# Sharp program that takes distance and time as input and displays the speed in kilometres per hour and miles per hour.
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace speed
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            float distance;
+            float hour, min, sec;
+
+            float timesec;
+            float mps;
+            float kph, mph;
+
+            Console.WriteLine("enter the distance(meters):");
+            distance = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("enter the timesec(hour):");
+            hour = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("enter the timesec(min):");
+            min = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("enter the timesec(sec):");
+            sec = Convert.ToSingle(Console.ReadLine());
+
+            timesec = (hour * 3600 + min * 60 + sec);
+            mps = (distance / timesec);
+            kph = (distance / 1000.0f) / (timesec / 3600.0f);
+            mph = kph / 1.609f;
+
+            Console.WriteLine("your speed in meters/per sec:{0} ", mps);
+            Console.WriteLine("your speed in km/h:{0}", kph);
+            Console.WriteLine("your speed in miles/h:{0}", mph);
+        }
+    }
+}
+output;;
+enter the distance(meters):
+2000
+enter the timesec(hour):
+2
+enter the timesec(min):
+23
+enter the timesec(sec):
+22
+your speed in meters/per sec:0.2325041
+your speed in km/h:0.8370147
+your speed in miles/h:0.520208
