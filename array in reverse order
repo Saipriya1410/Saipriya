@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace displayreverse
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i,n;
+            int[] arr = new int[100];
+            
+
+            Console.WriteLine("enter the how many elements we need: \n");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("display the elements - {0}",n);
+            for (i = 0; i < n; i++) 
+            {
+                Console.WriteLine("elements - {0}", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("elements in an array:\n");
+            for ( i = 0; i < n; i++)
+            {
+                Console.WriteLine("{0}", arr[i]);
+            }
+            Console.WriteLine("the values in reverse order");
+            for ( i = n-1; i >= 0; i--)
+            {
+                Console.WriteLine("{0}", arr[i]);
+            }
+            Console.WriteLine("\n");
+        }
+    }
+}
+
+output;;;
+enter the how many elements we needhow many elements we need:
+
+6
+display the elements - 6
+elements - 0
+1
+elements - 1
+2
+elements - 2
+3
+elements - 3
+4
+elements - 4
+5
+elements - 5
+6
+elements in an array:
+
+1
+2
+3
+4
+5
+6
+the values in reverse order
+6
+5
+4
+3
+2
+1
