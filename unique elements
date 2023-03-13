@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace uniqueelements
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, ctr = 0;
+            int[] a = new int[100];
+            int i, j, k;
+
+            Console.WriteLine(".......................\n");
+            Console.WriteLine("Enter the elements we need :");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("input{0} elements :",n);
+            for(i=0; i<n; i++)
+            {
+                Console.WriteLine("elements-{0}",i);
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            /*Checking duplicate elements in the array */
+            Console.Write("\nThe unique elements found in the array are : \n");
+            for (i = 0; i < n; i++)
+            {
+                ctr = 0;
+                /*Check duplicate bifore the current position and
+		increase counter by 1 if found.*/
+                for (j = 0; j < i-1; j++)
+                {
+                    /*Increment the counter when the seaarch value is duplicate.*/
+                    if (a[i] == a[j])
+                    {
+                        ctr++;
+                    }
+                    
+                }
+                /*Check duplicate after the current position and
+		  increase counter by 1 if found.*/
+                for (k = i+1; k < n; k++)
+                {
+                    /*Increment the counter when the seaarch value is duplicate.*/
+                    if (a[i] == a[k])
+                    {
+                        ctr++;
+                    }
+                    /* Duplicate numbers next to each other*/
+                    if (a[i] == a[i + 1])
+                    {
+                        i++;
+                    }
+                }
+                if(ctr ==0)
+                {
+                    Console.WriteLine("elements:{0}", a[i]);
+                }
+                Console.WriteLine("\n");
+            }
+        }
+    }
+}
+output;;
+Enter the elements we need :
+3
+input3 elements :
+elements-0
+1
+elements-1
+1
+elements-2
+2
+
+The unique elements found in the array are :
+
+
+elements:2
