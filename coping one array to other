@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace copyingelements
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, n;
+            int[] a1 = new int[100];
+            int[] a2 = new int[100];
+
+            Console.WriteLine("enter the elements we need:\n");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("elements in an array {0}",n);
+            for ( i = 0; i < n; i++)
+            {
+                Console.WriteLine("elements-{0}",i);
+                a1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for ( i = 0; i < n; i++)
+            {
+                a2[i] = a1[i];
+            }
+            Console.WriteLine("elements in first array;");
+            for (i = 0; i < n; i++)
+            {
+                Console.WriteLine("elements-{0}", a1[i]);
+            }
+            Console.WriteLine("elements in second array;");
+            for (i = 0; i < n; i++)
+            {
+                Console.WriteLine("elements-{0}", a2[i]);
+            }
+            Console.WriteLine("\n");
+        }
+    }
+}
+output;;
+enter the elements we need:
+
+5
+elements in an array 5
+elements-0
+0
+elements-1
+1
+elements-2
+2
+elements-3
+3
+elements-4
+4
+elements in first array;
+elements-0
+elements-1
+elements-2
+elements-3
+elements-4
+elements in second array;
+elements-0
+elements-1
+elements-2
+elements-3
+elements-4
