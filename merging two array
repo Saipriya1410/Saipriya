@@ -1,0 +1,103 @@
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace merging
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j, k;
+            int s1, s2, s3;
+
+            int[] a1 = new int[100];
+            int[] a2 = new int[100];
+            int[] a3 = new int[100];
+
+            Console.WriteLine("Enter the first array:\n");
+            s1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("input {0} of first array:\n",s1);
+            for (i = 0; i < s1; i++)
+            {
+                Console.WriteLine("elements-{0}",i);
+                a1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Enter the second array:\n");
+            s2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("input {0} of second array:\n", s2);
+            for (i = 0; i < s2; i++)
+            {
+                Console.WriteLine("elements-{0}", i);
+                a2[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            // size of third array is merging of first and second array
+            s3 = s1 + s2;
+            // moving to third array
+            for (i = 0; i < s1; i++)
+            {
+                a3[i] = a1[i];
+            }
+            for (j = 0; j < s2; j++)
+            {
+                a3[i] = a2[j];
+                i++;
+            }
+            //sort the array in ascending array
+            for (i = 0; i < s3; i++)
+            {
+                for (k = 0; k < s3-1; k++)
+                {
+                    if (a3[k] >= a3[k+1])
+                    {
+                        j = a3[k + 1];
+                        a3[k + 1] = a3[k];
+                        a3[k] = j;
+
+                    }
+                }
+            }
+            Console.WriteLine("enter the merged array in ascending order:\n");
+            for (i = 0; i < s3; i++)
+            {
+                Console.WriteLine("merged array:{0}", a3[i]);
+            }
+            Console.WriteLine("\n\n ");
+        }
+    }
+}
+output;;;
+Enter the first array:
+
+3
+input 3 of first array:
+
+elements-0
+1
+elements-1
+2
+elements-2
+3
+Enter the second array:
+
+3
+input 3 of second array:
+
+elements-0
+4
+elements-1
+5
+elements-2
+6
+enter the merged array in ascending order:
+
+merged array:1
+merged array:2
+merged array:3
+merged array:4
+merged array:5
